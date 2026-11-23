@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Countdown Timer</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="wrap">
+  <header class="head">
+    <h1>Countdown Timer</h1>
+    <p class="sub">Set a time, press start, get things done.</p>
+  </header>
+
+  <section id="display" class="display" aria-label="Time remaining">
+    <span id="time" class="time">00:00</span>
+    <span id="state" class="state">Ready</span>
+  </section>
+
+  <section class="setup" aria-label="Set duration">
+    <label class="field">
+      <span>Minutes</span>
+      <input id="minutes" type="number" min="0" max="999" value="5" inputmode="numeric">
+    </label>
+    <label class="field">
+      <span>Seconds</span>
+      <input id="seconds" type="number" min="0" max="59" value="0" inputmode="numeric">
+    </label>
+  </section>
+
+  <div class="presets">
+    <button class="chip" type="button" data-min="1">1 min</button>
+    <button class="chip" type="button" data-min="5">5 min</button>
+    <button class="chip" type="button" data-min="10">10 min</button>
+    <button class="chip" type="button" data-min="25">25 min</button>
+  </div>
+
+  <div class="actions">
+    <button id="startPause" class="btn btn-primary" type="button">Start</button>
+    <button id="reset" class="btn" type="button">Reset</button>
+  </div>
+
+  <p id="message" class="message" role="status" aria-live="polite"></p>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
